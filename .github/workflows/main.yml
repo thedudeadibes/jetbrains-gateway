@@ -34,6 +34,8 @@ jobs:
           context: .
           platforms: linux/amd64,linux/arm64
           push: ${{ github.event_name != 'pull_request' }}
+          build-args: |
+            UBUNTU_VERSION=${{ env.UBUNTU_VERSION }}
           tags: |
             ${{ secrets.DOCKER_USERNAME }}/jetbrains-gateway:latest
             ${{ secrets.DOCKER_USERNAME }}/jetbrains-gateway:${{ env.UBUNTU_VERSION }}
