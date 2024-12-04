@@ -1,4 +1,5 @@
-FROM ubuntu:latest
+ARG UBUNTU_VERSION
+FROM ubuntu:${UBUNTU_VERSION}
 
 LABEL description="An ssh server for JetBrains Gateway with optional public key authentication"
 
