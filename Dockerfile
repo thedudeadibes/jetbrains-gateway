@@ -10,7 +10,7 @@ ENV SSH_PORT=22
 ENV SSH_PUBLIC_KEY=""
 
 RUN apt-get update && apt-get upgrade -y && \
-    apt-get install openssh-server git -y && \
+    apt-get install openssh-server git vim -y && \
     systemctl enable ssh
 
 # Add startup script
